@@ -90,7 +90,7 @@ class RestaurantServiceTest {
         Item dalTadka = new Item("Dal Tadka", 180, true);
         orderValue.addFoodItemsToCart(dalTadka, 1);
 
-        Item rasMalai = new Item("Ras Malain", 35, true);
+        Item rasMalai = new Item("Ras Malai", 35, true);
         orderValue.addFoodItemsToCart(rasMalai, 5);
     }
 }
