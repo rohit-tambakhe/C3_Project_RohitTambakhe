@@ -22,7 +22,7 @@ class RestaurantServiceTest {
     public void searching_for_existing_restaurant_should_return_expected_restaurant_object() throws restaurantNotFoundException {
         mockData();
         List<Restaurant> getRestaurants = service.getRestaurants();
-        Restaurant getRestaurant = service.findRestaurantByName("Amelie's cafe");
+        Restaurant getRestaurant = service.findRestaurantByName("Amgit elie's cafe");
         assertEquals(getRestaurants.get(0),getRestaurant);
     }
     @Test
@@ -64,7 +64,7 @@ class RestaurantServiceTest {
     public void calculate_the_order_cost()
     {  String expectedPrice = "119";
         mockData();
-        String getPrice = service.getPriceResturant(restaurant.getMenu());
+        String getPrice = service.getPriceRestaurant(restaurant.getMenu());
         assertEquals(expectedPrice, getPrice);
     }
 }
