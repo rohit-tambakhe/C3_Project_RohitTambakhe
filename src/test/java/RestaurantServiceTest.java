@@ -78,19 +78,19 @@ class RestaurantServiceTest {
     }
 
     private void addFoodItemsToCart() {
-        Item tandoorRoti = new Item("Tandoor Roti", 25, true);
-        orderValue.addFoodItemsToCart(tandoorRoti, 10);
+        Item chulhaRoti = new Item("Chulha Roti", 25, true);
+        orderValue.addFoodItemsToCart(chulhaRoti, 10);
 
-        Item zeeraRice = new Item("Zeera Rice", 110, true);
-        orderValue.addFoodItemsToCart(zeeraRice, 1);
+        Item Rice = new Item("Rice", 110, true);
+        orderValue.addFoodItemsToCart(Rice, 1);
 
-        Item paneerButterMasala = new Item("Paneer Butter Masala", 250, true);
-        orderValue.addFoodItemsToCart(paneerButterMasala, 2);
+        Item shahiPaneer = new Item("Shahi Paneer", 250, true);
+        orderValue.addFoodItemsToCart(shahiPaneer, 2);
 
-        Item dalMakhni = new Item("Dal Makhni", 180, true);
-        orderValue.addFoodItemsToCart(dalMakhni, 1);
+        Item dalTadka = new Item("Dal Tadka", 180, true);
+        orderValue.addFoodItemsToCart(dalTadka, 1);
 
-        Item gulabJamun = new Item("Gulab Jamun", 35, true);
-        orderValue.addFoodItemsToCart(gulabJamun, 5);
+        Item rasMalai = new Item("Ras Malain", 35, true);
+        orderValue.addFoodItemsToCart(rasMalai, 5);
     }
 }
