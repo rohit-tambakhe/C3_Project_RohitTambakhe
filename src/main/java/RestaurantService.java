@@ -1,6 +1,10 @@
 import java.time.LocalTime;
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
+import java.util.HashMap;
+import java.util.Map;
 
 public class RestaurantService {
     private static final List<Restaurant> restaurants = new ArrayList<>();
@@ -28,15 +32,5 @@ public class RestaurantService {
 
     public List<Restaurant> getRestaurants() {
         return restaurants;
-    }
-
-    public String getPriceRestaurant(@org.jetbrains.annotations.NotNull List<Item> items) {
-        int price = 0;
-
-        for (Item item : items) {
-            if(item.isCheck())
-                price = price + item.getPrice();
-        }
-        return String.valueOf(price);
     }
 }

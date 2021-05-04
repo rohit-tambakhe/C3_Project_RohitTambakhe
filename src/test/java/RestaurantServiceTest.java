@@ -7,6 +7,9 @@ class RestaurantServiceTest {
 
     RestaurantService service = new RestaurantService();
     Restaurant restaurant;
+
+    OrderValue orderValue = new OrderValue();
+
     //REFACTOR ALL THE REPEATED LINES OF CODE
 
     private void mockData()
@@ -61,10 +64,33 @@ class RestaurantServiceTest {
     //<<<<<<<<<<<<<<<<<<<<ADMIN: ADDING & REMOVING RESTAURANTS>>>>>>>>>>>>>>>>>>>>>>>>>>
 
     @Test
-    public void calculate_the_order_cost()
-    {  String expectedPrice = "119";
-        mockData();
-        String getPrice = service.getPriceRestaurant(restaurant.getMenu());
-        assertEquals(expectedPrice, getPrice);
+    public void calculate_final_order_value_pass() {
+        addFoodItemsToCart();
+
+        assertEquals(1215, orderValue.totalOrderValue());
+    }
+
+    @Test
+    public void calculate_final_order_value_fail() {
+        addFoodItemsToCart();
+
+        assertNotEquals(100, orderValue.totalOrderValue());
+    }
+
+    private void addFoodItemsToCart() {
+        Item tandoorRoti = new Item("Tandoor Roti", 25, true);
+        orderValue.addFoodItemsToCart(tandoorRoti, 10);
+
+        Item zeeraRice = new Item("Zeera Rice", 110, true);
+        orderValue.addFoodItemsToCart(zeeraRice, 1);
+
+        Item paneerButterMasala = new Item("Paneer Butter Masala", 250, true);
+        orderValue.addFoodItemsToCart(paneerButterMasala, 2);
+
+        Item dalMakhni = new Item("Dal Makhni", 180, true);
+        orderValue.addFoodItemsToCart(dalMakhni, 1);
+
+        Item gulabJamun = new Item("Gulab Jamun", 35, true);
+        orderValue.addFoodItemsToCart(gulabJamun, 5);
     }
 }
