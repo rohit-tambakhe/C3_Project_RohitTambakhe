@@ -6,18 +6,9 @@
         <sourceOutputDir name="target/generated-sources/annotations" />
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
-<<<<<<< HEAD
         <module name="Restaurant_project -Student version" />
         <module name="Restaurant_project" />
       </profile>
     </annotationProcessing>
-=======
-        <module name="library-demo" />
-      </profile>
-    </annotationProcessing>
-    <bytecodeTargetLevel target="8">
-      <module name="library-demo" target="8" />
-    </bytecodeTargetLevel>
->>>>>>> be5338247b07476c5a912cd785b7fedcba7dde36
   </component>
 </project>
